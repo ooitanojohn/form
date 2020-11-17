@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+/* form_text */
+
+dd {
+	position: relative;
+	margin-bottom: 20px;
+}
+dd input[type=text],select,option,input[type=date]{
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	margin: 8px 0;
+	padding: 0.3em;
+	transition: 0.3s;
+	border-radius: 50px;
+  outline: none;
+  background-color: gainsboro;
+}
+dd input[type=text]:focus ,select:focus,option:focus,input[type=date]:focus{
+	border-color: #2e77e5;
+}
+dd input[type=text]:not([id="address2"]):not([id="post2"]) ,select,option,input[type=date]{
+	padding-left: 40px;
+}
+dd i ,select i{
+	position: absolute;
+	top: 8px;
+	left: 0;
+	padding: 9px 8px;
+	transition: 0.3s;
+	color: #aaaaaa;
+}
+dd input[type=text]:focus + i ,option:focus + i,input[type=date]:focus + i{
+	color: #2e77e5;
+}
+
+
+/* input text date */
+input[type="date"]{
+  cursor: text;
+}
+input[type="date"]::-webkit-calendar-picker-indicator{
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+}
+
+/* select */
+select{
+  cursor: pointer;
+}
+
+
+
+/* checkbox */
+.ECM_CheckboxInput {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  float: left;
+}
+
+.ECM_CheckboxInput-Input {
+  opacity: 0;
+}
+
+.ECM_CheckboxInput:hover{
+  background: rgba(0,0,0,.05) !important;
+}
+
+.ECM_CheckboxInput:hover > .ECM_CheckboxInput-DummyInput{
+  transform: scale(1.1);
+}
+
+.ECM_CheckboxInput-Input:focus + .ECM_CheckboxInput-DummyInput{
+  transform: scale(1.1);
+}
+.ECM_CheckboxInput-Input:checked + .ECM_CheckboxInput-DummyInput {
+  background: #2e77e5;
+}
+.ECM_CheckboxInput-Input:checked + .ECM_CheckboxInput-DummyInput::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35%;
+  height: 4px;
+  border-radius: 2px;
+  transform: translate(-6px, 5px) rotateZ(-135deg);
+  transform-origin: 2px 2px;
+  background: #FFFFFF;
+}
+.ECM_CheckboxInput-Input:checked + .ECM_CheckboxInput-DummyInput::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 4px;
+  border-radius: 2px;
+  transform: translate(-6px, 5px) rotateZ(-45deg);
+  transform-origin: 2px 2px;
+  background: #FFFFFF;
+}
+.ECM_CheckboxInput-DummyInput {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: solid 2px transparent;
+  background: rgba(0, 0, 0, .15);
+  border-radius: 50%;
+  transition: all .15s linear;
+}
+.ECM_CheckboxInput-LabelText {
+  margin-left: 12px;
+  display: block;
+  font-weight: bold;
+}
+
+
+/* 送信ボタン */
+.button1 {
+  width: 140px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid gainsboro;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  }
+
+.button1:hover {
+  background-color: #2e77e5;
+  box-shadow: 0px 15px 20px rgba(46, 104, 229, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.button1:hover:before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f658";
+}
+.fa-envelope{
+  margin-right: 6.5px;
+}
+.button1:hover .fa-envelope{
+  display: none;
+  border: none;
+}
